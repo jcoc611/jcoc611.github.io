@@ -1,0 +1,11 @@
+# Name of your blog (this will show up at the top of your page and in the RSS feed)
+name: JCOC611 Blog
+
+# Short description (goes below the title; it will also be used in the RSS feed)
+description: "A blog where I talk about general programming, specific code/projects, and other generally interesting subjects.."
+
+# Your name, as you want it to appear underneath each post and in the footer
+author: jcoc611
+
+encoding: UTF-8
+permalink: /:categories/:title

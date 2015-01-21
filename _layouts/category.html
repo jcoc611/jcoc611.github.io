@@ -1,29 +1,50 @@
 ---
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Juan Camilo Osorio's Blog</title>
-	<link rel="stylesheet" href="stylesheets/blog.css">
+	<link rel="stylesheet" href="/stylesheets/blog.css">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
 </head>
 <body>
 	<div id="header">
-		<a href="//jcoc611.com/"><img src="images/JCOC611.png" title="Go to Home." alt="Juan Camilo Osorio's Blog Logo"></a>
+		<a href="//jcoc611.com/"><img src="/images/JCOC611.png" title="Go to Home." alt="Juan Camilo Osorio's Blog Logo"></a>
 		<a id="blog" href="/">| Blog</a>
 		<h1 style="display:none">Juan Camilo Osorio's Blog</h1>
 		<div id="menu">
+			{%if page.categoryvalue == "web" %}
+			<a style="background-color:#fff" href="/web">Web</a>
+			{% else %}
 			<a href="/web">Web</a>
+			{% endif %}
+			{%if page.categoryvalue == "thought" %}
+			<a style="background-color:#fff" href="/thought">Thought</a>
+			{% else %}
 			<a href="/thought">Thought</a>
+			{% endif %}
+			{%if page.categoryvalue == "code" %}
+			<a style="background-color:#fff" href="/code">Code</a>
+			{% else %}
 			<a href="/code">Code</a>
+			{% endif %}
+			{%if page.categoryvalue == "slog" %}
+			<a style="background-color:#fff" href="/slog" title="Logs of interesting pieces of code or events that are happening in the Computer Science program at The University of Toronto.">sLOG</a>
+			{% else %}
 			<a href="/slog" title="Logs of interesting pieces of code or events that are happening in the Computer Science program at The University of Toronto.">sLOG</a>
+			{% endif %}
+			{%if page.categoryvalue == "other" %}
+			<a style="background-color:#fff" href="/other">Other</a>
+			{% else %}
 			<a href="/other">Other</a>
+			{% endif %}
 		</div>
 	</div>
 	<div id="wrapper">
 		<div id="content">
-			{% for post in site.posts limit:5 %}
+			{% for post in site.categories[page.categoryvalue] limit:5 %}
 			<div class="post">
 				<div class="leftpost">
 					<a href="{{ post.url }}"><div class="pdate"  title='{{ post.date | date: "%B %-d, %Y" }}'>
@@ -59,7 +80,7 @@
 				</div>
 			</div>
 			{% endfor %}
-			{% if site.posts == null %}
+			{% if site.categories[page.categoryvalue] == null %}
 			There are no posts to show.
 			{% endif %}
 		</div>
@@ -74,7 +95,7 @@
 			<div class="category">Follow me</div>
 			<div class="tab">
 				<a class="ilink" href="{{ site.url }}/feed.xml"><img src="/images/rss.png" alt=""></a>
-				<a class="ilink" href="https://twitter.com/jcoc611"><img src="images/twitter.png" alt=""></a>
+				<a class="ilink" href="https://twitter.com/jcoc611"><img src="/images/twitter.png" alt=""></a>
 			</div>	
 		</div>
 	</div>

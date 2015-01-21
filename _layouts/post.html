@@ -1,0 +1,113 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juan Camilo Osorio's Blog</title>
+	<link rel="stylesheet" href="/stylesheets/blog.css">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+	<style type="text/css">
+	.post .pcc{
+		max-height:none!important;
+	}
+	</style>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="header">
+		<a href="//jcoc611.com/"><img src="/images/JCOC611.png" title="Go to Home." alt="Juan Camilo Osorio's Blog Logo"></a>
+		<a id="blog" href="/">| Blog</a>
+		<h1 style="display:none">Juan Camilo Osorio's Blog</h1>
+		<div id="menu">
+			<a href="/web">Web</a>
+			<a href="/thought">Thought</a>
+			<a href="/code">Code</a>
+			<a href="/slog" title="Logs of interesting pieces of code or events that are happening in the Computer Science program at The University of Toronto.">sLOG</a>
+			<a href="/other">Other</a>
+		</div>
+	</div>
+	<div id="wrapper">
+		<div id="content">
+			<div class="post">
+				<div class="leftpost">
+					<a href="{{ page.url }}"><div class="pdate"  title='{{ page.date | date: "%B %-d, %Y" }}'>
+						<span class="pdate1">{{ page.date | date: "%d" }}</span>
+						<span class="pdate2">
+							{% assign m = page.date | date: "%-m" %}
+							{% case m %}
+								{% when '1' %}Jan
+								{% when '2' %}Feb
+								{% when '3' %}Mar
+								{% when '4' %}Apr
+								{% when '5' %}May
+								{% when '6' %}Jun
+								{% when '7' %}Jul
+								{% when '8' %}Aug
+								{% when '9' %}Sep
+								{% when '10' %}Oct
+								{% when '11' %}Nov
+								{% when '12' %}Dec
+							{% endcase %}
+						</span>
+					</div></a>
+					<a href="/{{ page.category }}" title="View more posts on {{ page.category }}" class="ptag">{{ page.category }}</a>
+				</div>
+				<div class="pcontent">
+					<a href="{{ page.url }}"><div class="title">{{ page.title }}</div></a>
+					<div class="pcc">
+						{{ page.content }}
+					</div>
+					<hr style="margin-top: 20px;margin-bottom: 12px;">
+					<div class="pshare">
+						<div class="fb-share-button" data-href="{{ page.path }}" data-layout="button_count"></div> 
+						<div class="g-plus" style="width:92px" data-action="share" data-annotation="bubble" data-href="{{ page.path }}"></div>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="jcoc611">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</div>
+					<div class="pcomments">
+						<div id="disqus_thread"></div>
+						<script type="text/javascript">
+						    /* * * CONFIGURATION VARIABLES * * */
+						    var disqus_shortname = 'jcoc611';
+						    var disqus_identifier = '{{ page.id }}';
+						    var disqus_title = '{{ page.title }}';
+
+						    /* * * DON'T EDIT BELOW THIS LINE * * */
+						    (function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						    })();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="right">
+			<div class="category">Recent posts</div>
+			<div class="tab">
+				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
+				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
+				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
+			</div>
+			<br/><br/>
+			<div class="category">Follow me</div>
+			<div class="tab">
+				<a class="ilink" href="{{ site.url }}/feed.xml"><img src="/images/rss.png" alt=""></a>
+				<a class="ilink" href="https://twitter.com/jcoc611"><img src="/images/twitter.png" alt=""></a>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

@@ -1,12 +1,10 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Juan Camilo Osorio's Blog</title>
 	<link rel="stylesheet" href="stylesheets/blog.css">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+	<link rel="alternate" type="application/rss+xml" title="JCOC611 Blog" href="/feed.xml">
 </head>
 <body>
 	<div id="header">
@@ -23,45 +21,56 @@
 	</div>
 	<div id="wrapper">
 		<div id="content">
-			{% for post in site.posts limit:5 %}
+			
 			<div class="post">
 				<div class="leftpost">
-					<a href="{{ post.url }}"><div class="pdate"  title='{{ post.date | date: "%B %-d, %Y" }}'>
-						<span class="pdate1">{{ post.date | date: "%d" }}</span>
+					<a href="/slog/test-post"><div class="pdate"  title='January 20, 2015'>
+						<span class="pdate1">20</span>
 						<span class="pdate2">
-							{% assign m = post.date | date: "%-m" %}
-							{% case m %}
-								{% when '1' %}Jan
-								{% when '2' %}Feb
-								{% when '3' %}Mar
-								{% when '4' %}Apr
-								{% when '5' %}May
-								{% when '6' %}Jun
-								{% when '7' %}Jul
-								{% when '8' %}Aug
-								{% when '9' %}Sep
-								{% when '10' %}Oct
-								{% when '11' %}Nov
-								{% when '12' %}Dec
-							{% endcase %}
+							
+							Jan
+								
 						</span>
 					</div></a>
-					<a href="/{{ post.category }}" title="View more posts on {{ post.category }}" class="ptag">{{ post.category }}</a>
+					<a href="/slog" title="View more posts on slog" class="ptag">slog</a>
 				</div>
 				<div class="pcontent">
-					<a href="{{ post.url }}"><div class="title">{{ post.title }}</div></a>
+					<a href="/slog/test-post"><div class="title">Test Post</div></a>
 					<div class="pcc">
-						{{ post.content }}
+						<p>This is a <em>test</em>.</p>
+
 					</div>
 					<div class="pfull">
-						<a class="pfull" href="{{ post.url }}">View post and comment</a>
+						<a class="pfull" href="/slog/test-post">View post and comment</a>
 					</div>
 				</div>
 			</div>
-			{% endfor %}
-			{% if site.posts == null %}
-			There are no posts to show.
-			{% endif %}
+			
+			<div class="post">
+				<div class="leftpost">
+					<a href="/slog/second-post"><div class="pdate"  title='January 20, 2015'>
+						<span class="pdate1">20</span>
+						<span class="pdate2">
+							
+							Jan
+								
+						</span>
+					</div></a>
+					<a href="/slog" title="View more posts on slog" class="ptag">slog</a>
+				</div>
+				<div class="pcontent">
+					<a href="/slog/second-post"><div class="title">Second post</div></a>
+					<div class="pcc">
+						<p><strong>This is the second post.</strong></p>
+
+					</div>
+					<div class="pfull">
+						<a class="pfull" href="/slog/second-post">View post and comment</a>
+					</div>
+				</div>
+			</div>
+			
+			
 		</div>
 		<div id="right">
 			<div class="category">Recent posts</div>
@@ -73,7 +82,7 @@
 			<br/><br/>
 			<div class="category">Follow me</div>
 			<div class="tab">
-				<a class="ilink" href="{{ site.url }}/feed.xml"><img src="/images/rss.png" alt=""></a>
+				<a class="ilink" href="/feed.xml"><img src="/images/rss.png" alt=""></a>
 				<a class="ilink" href="https://twitter.com/jcoc611"><img src="images/twitter.png" alt=""></a>
 			</div>	
 		</div>
