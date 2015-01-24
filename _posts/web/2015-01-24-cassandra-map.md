@@ -1,5 +1,5 @@
 ---
-title: Encoding Dynamic with JavaScript in Cassandra
+title: Encoding Dynamic Maps for Cassandra in JavaScript
 author: JC
 layout: post
 category: web
