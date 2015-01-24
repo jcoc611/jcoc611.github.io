@@ -115,6 +115,19 @@ body{
 	position: relative;
 	line-height: initial;
 }
+.pcc pre{
+	overflow-x:scroll;
+}
+.pcc a{
+	color:#596EA5;
+}
+.pcc a:hover{
+	color:#6B87D0;
+}
+.pcc pre.prettyprint{
+	font-size: 15px;
+	border:none;
+}
 .post .pdate:hover{
 	background-color: #555;
 }
