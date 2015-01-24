@@ -56,6 +56,7 @@ body{
 #content .post{
 	width:630px;
 	margin-bottom:30px;
+	line-height:32px;
 }
 .post .leftpost{
 	float:left;
@@ -112,6 +113,7 @@ body{
 	height:80px;
 	background-color: #2e2e2e;
 	position: relative;
+	line-height: initial;
 }
 .post .pdate:hover{
 	background-color: #555;
@@ -138,6 +140,7 @@ body{
 	text-align: right;
 	text-decoration: none;
 	display: block;
+	line-height: initial;
 }
 .ptag:hover{
 	background-color: #555;
@@ -180,6 +183,7 @@ body{
 	float: left;
 	margin-left: 10px;
 	margin-right: 15px;
+	line-height: initial;
 }
 #right{
 	width: 250px;

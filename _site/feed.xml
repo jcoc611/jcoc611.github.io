@@ -7,29 +7,16 @@
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Test Post</title>
+				<title>Why Geeks should Write</title>
 				        
 				
-					<description>&lt;p&gt;This is a &lt;em&gt;test&lt;/em&gt;.&lt;/p&gt;
+					<description>&lt;p&gt;I recently started a course at the University of Toronto that requires us to keep a &lt;em&gt;sLOG&lt;/em&gt;, and this happens to be the first required topic we were instructed to write about. The thing is, the topic somehow implies that there is some sort of cultural belief that they &lt;em&gt;shouldn&amp;#8217;t&lt;/em&gt;. I mean, I personally believe that &lt;em&gt;everybody&lt;/em&gt; should write, regardless of where that writing takes place. However, most people imagine Computer Scientists (or programmers in general) as anti-social beings that live in basements and somehow are not interested in communicating with others. The truth is that our field is much more social than most people would think. Since projects can yeild visible results in short periods of time, and both code and thougths can be interchanged effortlessly through the internet, &lt;em&gt;writing&lt;/em&gt; and &lt;em&gt;reading&lt;/em&gt; blogs is one of the best investments a geek can make in order to gain knowledge and recognition in the field.&lt;/p&gt;
 
 </description>
 				
 				<pubDate>Tue, 20 Jan 2015 00:00:00 -0500</pubDate>
-				<link>/slog/test-post</link>
-				<guid isPermaLink="true">/slog/test-post</guid>
-			</item>
-		
-			<item>
-				<title>Second post</title>
-				        
-				
-					<description>&lt;p&gt;&lt;strong&gt;This is the second post.&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Tue, 20 Jan 2015 00:00:00 -0500</pubDate>
-				<link>/slog/second-post</link>
-				<guid isPermaLink="true">/slog/second-post</guid>
+				<link>/slog/why-geeks-should-write</link>
+				<guid isPermaLink="true">/slog/why-geeks-should-write</guid>
 			</item>
 		
 	</channel>

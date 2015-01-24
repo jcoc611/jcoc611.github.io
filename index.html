@@ -81,9 +81,9 @@
 		<div id="right">
 			<div class="category">Recent posts</div>
 			<div class="tab">
-				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
-				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
-				<a href="#" title="This is some text for the title of a post">This is some text for the title of a post</a><br/>
+				{% for post in site.posts limit: 5 %}
+				<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br/>
+				{% endfor %}
 			</div>
 			<br/><br/>
 			<div class="category">Follow me</div>
