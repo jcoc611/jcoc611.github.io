@@ -3,7 +3,7 @@ html, body{
 	padding:0;
 }
 body{
-	background-color: #ececec;
+	background-color: #3D3D3D;
 	font-family: 'Arial', sans;
 	min-width:1030px;
 }
@@ -17,8 +17,9 @@ body{
 	text-decoration: none;
 }
 #header{
-	margin:30px 50px;
+	padding:30px 50px;
 	text-align: center;
+	background-color: #ececec;
 }
 #menu{
 	display:inline-block;
@@ -40,6 +41,13 @@ body{
 #menu a:hover{
 	background-color: #e1e0e0;
 }
+#wrap2{
+	width:100%;
+	height:auto;
+	display:inline-block;
+	background-color: #ececec;
+	padding-bottom: 20px;
+}
 #wrapper{
 	width:900px;
 	margin:0 auto;
@@ -50,11 +58,11 @@ body{
 	float:left;
 }
 #content{
-	width:630px;
+	width:880px;
 	margin-right:20px;
 }
 #content .post{
-	width:630px;
+	width:880px;
 	margin-bottom:30px;
 	line-height:32px;
 }
@@ -66,9 +74,14 @@ body{
 	position:relative;
 }
 .post .pcontent{
-	width: 510px;
+	width: 760px;
 	color:#2e2e2e;
 	padding-left:120px;
+}
+.pcontent img{
+	float: left;
+	margin-right: 15px;
+	/*margin-bottom: 15px;*/
 }
 .post .pcc:after{
 	content:"\20";
@@ -192,6 +205,12 @@ body{
 .pcomments{
 	margin-top: 15px;
 }
+.pimgcenter{
+	text-align: center; position: relative; display: inline-block; width: 100%;	
+}
+.pimgcenter img{
+	margin-bottom: 20px; width: 600px; float: none;
+}
 .fb-share-button{
 	float: left;
 	margin-left: 10px;
@@ -201,6 +220,7 @@ body{
 #right{
 	width: 250px;
 	color:#2e2e2e;
+	margin-bottom: 20px;
 }
 #right .category{
 	font-size:18px;
@@ -226,4 +246,52 @@ body{
 	width:inherit;
 	margin-left:50px;
 	text-align:center;
+}
+#footer{
+	width: 100%;
+	display: block;
+	float: left;
+	clear: both;
+	background-color: #3D3D3D;
+}
+#fhigh{
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	padding: 12px;
+	background-color: #272727;
+	letter-spacing: 3px;
+}
+#flow{
+	padding-top: 5px;
+	width: 100%;
+	position: relative;
+	height: 23px;
+}
+#flow > div{
+	position:relative;
+	float:left;
+	color:#ddd;
+	font-size:14px;
+}
+#flow > #fleft{
+	left: 20px;
+}
+#flow > #fright{
+	position:absolute;
+	right:20px;
+}
+#flow > #fcenter{
+	position: absolute;
+	left:50%;
+	margin-left:-10px;
+	font-family:'Lato', sans;
+	font-weight:300;
+}
+#footer a{
+	color:#fff;
+	text-decoration:none;
+}
+#footer a:hover{
+	color:#EAAE8A;
 }
