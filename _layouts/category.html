@@ -5,7 +5,7 @@
 
 	<div id="wrap2"><div id="wrapper">
 		<div id="content">
-			{% for post in site.categories[page.categoryvalue] limit:5 %}
+			{% for post in site.categories[page.categoryvalue] limit:10 %}
 			<div class="post">
 				<div class="leftpost">
 					<a href="{{ post.url }}"><div class="pdate"  title='{{ post.date | date: "%B %-d, %Y" }}'>
