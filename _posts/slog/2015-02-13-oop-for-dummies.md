@@ -27,7 +27,7 @@ Horror movie characters can, among other things, *dance*, *jump-scare*, and *mur
 ## Classes
 
 <div class="pimgcenter">
-<img src="http://assets.mixxtopia.com/images/730x%3E/6c/1d/e5/6c1de5aed195474ab854cbc5bc775bf2.jpg" alt="Horror Movie Characters"/>
+<img src="/images/posts/2015-02-13/class.jpg" alt="Horror Movie Characters"/>
 </div>
 
 You guessed it, each one of these characters is also an **instance**, and has both **properties** and **methods**. However, when we talk about characters being instances, it is important to specify *what* they are instances *of*. In this case, all of these characters are instances, or examples, of *horror movie characters*. Each has different, unique, properties, as we mentioned earlier; however, in general, all of them murder people and scare us in films. Given these similarities, it is often useful to group them into **classes**. Then, it becomes possible to define generic **methods** and **properties** for an entire **class** instead of having to do this for each specific character.
