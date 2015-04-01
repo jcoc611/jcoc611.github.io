@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Why Unit Testing Might Seem Like a Waste of Time| Juan Camilo Osorio's Blog</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<!-- some awesome favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="//static.jcoc611.com/wcon/icons/apple-touch-icon-180x180.png">
+	<meta name="apple-mobile-web-app-title" content="JCOC611 Blog">
+	<link rel="icon" type="image/png" href="//static.jcoc611.com/wcon/icons/favicon-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="//static.jcoc611.com/wcon/icons/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="//static.jcoc611.com/wcon/icons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="//static.jcoc611.com/wcon/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="//static.jcoc611.com/wcon/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="stylesheet" href="/stylesheets/blog.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="JCOC611 Blog" href="/feed.xml">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-58906916-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="//jcoc611.com/"><img src="/images/JCOC611.png" title="Go to Home." alt="Juan Camilo Osorio's Blog Logo"></a>
+		<a id="blog" href="/" title="Go to main page of Blog">| Blog</a>
+		<h1 style="display:none">Juan Camilo Osorio's Blog</h1>
+		<div id="menu">
+			<!-- Menu built with Liquid/Jekyll -->
+			
+			
+			<a href="/web">Web</a>
+			
+			
+			<a href="/thought">Thought</a>
+			
+			
+			<a href="/code">Code</a>
+			
+			
+			<a href="/slog" title="Logs of interesting pieces of code or events that are happening in the Computer Science program at The University of Toronto.">sLOG</a>
+			
+			
+			<a href="/other">Other</a>
+			
+		</div>
+	</div>
+	<style type="text/css">
+	.post .pcc{
+		max-height:none!important;
+	}
+	.post .pcc:after{
+		content: ""!important;
+		background: none!important;
+	}
+	</style>
+	<div id="wrap2"><div id="wrapper">
+		<div id="content">
+			<div class="post">
+				<div class="leftpost">
+					<a href="/slog/why-not-unittest"><div class="pdate"  title='March 19, 2015'>
+						<span class="pdate1">19</span>
+						<span class="pdate2">
+							
+							Mar
+								
+						</span>
+					</div></a>
+					<a href="/slog" title="View more posts on slog" class="ptag">slog</a>
+				</div>
+				<div class="pcontent">
+					<a href="/slog/why-not-unittest"><div class="title">Why Unit Testing Might Seem Like a Waste of Time</div></a>
+					<div class="pcc">
+						<p>Most of us in first year don’t have much (or any) practice in production environments, and we usually work with small code bases and relatively simple software. To me, and many others, unit testing is a complete waste of time, given that we could just check things manually in less time, and our code seldom breaks randomly. If you are one of us who doesn’t see much benefit in testing, don’t worry, I’ve been there. However, consider a project that has thousands of lines of code and a few thousand methods or functions. Now check each one manually. Not fun, right?</p>
+
+<p>My point is that, although unit testing might seem pointless in the early days, it will be more than worth it once you join a company or start your own large code base. Writing documentation and making sure your code works with doctests or unit tests is something that we learn out of context. I think that a great idea that beginner courses such as CSC148 could do is have a class-wide project as part of the course, where unit testing and documenting code suddenly becomes crucial to the success of the project.</p>
+
+<p>One of the things I have done to practice writing good test cases and documentation is go through dozens of API documentations, such as <a href="https://developers.facebook.com/">Facebook’s</a>, <a href="https://developers.pinterest.com/">Pinterest’s</a>, or <a href="https://developer.spotify.com/web-api/">Spotify’s</a>. Although these are mostly web-based, they can help get a general understanding of production-level documentation and testing.</p>
+
+<p>Keep unit testing,<br />
+Juan Camilo Osorio</p>
+
+					</div>
+					<hr style="margin-top: 20px;margin-bottom: 12px;">
+					<div class="pshare">
+						<div class="fb-share-button" data-href="_posts/slog/2015-03-19-why-not-unittest.md" data-layout="button_count"></div> 
+						<div class="g-plus" style="width:92px" data-action="share" data-annotation="bubble" data-href="_posts/slog/2015-03-19-why-not-unittest.md"></div>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="jcoc611">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</div>
+					<div class="pcomments">
+						<div id="disqus_thread"></div>
+						<script type="text/javascript">
+						    /* * * CONFIGURATION VARIABLES * * */
+						    var disqus_shortname = 'jcoc611';
+						    var disqus_identifier = '/slog/why-not-unittest';
+						    var disqus_title = 'Why Unit Testing Might Seem Like a Waste of Time';
+
+						    /* * * DON'T EDIT BELOW THIS LINE * * */
+						    (function() {
+							var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+							dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+							(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+						    })();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="right">
+			<div class="category">Related posts</div>
+			<div class="tab">
+				
+				<a style="overflow:visible" href="/slog/real-life-data-types" title="Real Life Abstract Data Types">Real Life Abstract Data Types</a><br/>
+				
+				<a style="overflow:visible" href="/slog/list-to-binary-search-tree" title="Inserting a sorted list into a binary search tree.">Inserting a sorted list into a binary search tree.</a><br/>
+				
+				<a style="overflow:visible" href="/slog/oop-for-dummies" title="Object Oriented Programming [For Dummies]">Object Oriented Programming [For Dummies]</a><br/>
+				
+				<a style="overflow:visible" href="/slog/python-recurception" title="Python Recurcepton: The making of a program that traces recursion">Python Recurcepton: The making of a program that traces recursion</a><br/>
+				
+				<a style="overflow:visible" href="/slog/python-event-handling" title="Event Handing in Python">Event Handing in Python</a><br/>
+				
+			</div>
+		</div>
+	</div></div>
+	<div id="footer">
+	<div id="fhigh">
+		<span><a href="http://jcoc611.com">Home</a></span> -
+		<span><a href="http://blog.jcoc611.com">Blog</a></span> -
+		<span><a href="https://github.com/jcoc611">Code</a></span>
+	</div>
+	<div id="flow">
+		<div id="fleft">Powered by <a href="https://pages.github.com/">GitHub Pages</a> and <a href="http://jekyllrb.com/">Jekyll</a>.</div>
+		<div id="fcenter">JC</div>
+		<div id="fright">&copy; JCOC611. All rights reserved.</div>
+	</div>
+</div>
+	<script>
+		$("pre").addClass("prettyprint");
+	</script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</body>
+</html>
